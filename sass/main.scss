@@ -1,8 +1,13 @@
 @import './base/reset';
 @import './utils/vars';
 @import './base/base';
+@import './utils/mixins';
+@import './utils/vendors';
+
+
 //studio====================================
 @import './components/header';
+@import './components/mobile-menu';
 
 @import './components/hat';
 

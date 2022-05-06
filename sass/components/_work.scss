@@ -1,7 +1,16 @@
 .work{
-    padding-bottom: 94px;
+    @include mq(notDesktop) {
+        display: none;
+    }   
+
+    @include mq(desktop) {
+        padding-bottom: 94px;
+    }
 }
 .work-title{
+    margin-bottom: 50px;
+    text-align: center;
+    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -10,7 +19,6 @@
 }
 .work-list{
     display: flex;
-    margin-top: 50px;
 
     &__item{
         margin-right: 30px;
@@ -37,44 +45,3 @@
         color: var(--white-color);
     }
 }
-.team-icon-list{
-    display: flex;
-    justify-content: center;
-
-    &__item{
-        display: flex;
-        margin-right: 10px;
-    }
-    &__item:last-of-type{
-        margin-right: 0;
-    }
-}
-.link-team-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--white-color);
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
-    &:hover,
-    &:focus{
-        background-color: var(--blue-color);
-    }
-    &:hover .icon-team,
-    &:focus .icon-team{
-        fill: var(--white-color);
-    }
-}  
-
-.icon-team{
-    display: block;
-    fill: var(--icons-color);
-    transition-property: fill;  
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);    
-    }

@@ -1,17 +1,54 @@
 .portfolio{
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 .buttons-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 40px;
 
-    &__item{
-        margin-right: 8px;
+    @include mq(tablet) {
+        display: flex;
+        justify-content: center;
+        gap: 0;
     }
-    &__item:last-of-type{
-        margin-right: 0;
+
+    @include mq(desktop) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    &__item{
+        @include mq(mobile) {
+            margin-right: 8px;
+            margin-bottom: 15px;
+        
+            &:last-child {
+                margin-right: 0;
+            }
+        
+            &:nth-child(n + 4) {
+                margin-bottom: 0;
+            }
+        }
+        
+        @include mq(tablet) {
+            margin-bottom: 0;
+        }
+        
+        @include mq(desktop) {
+            margin-right: 8px;
+        
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 }
 .buttons-navigation{

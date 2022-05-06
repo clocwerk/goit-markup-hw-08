@@ -4,52 +4,92 @@
 .header__container{
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+    }
 }
 .header__nav{
-display: flex;
-align-items: center;
+@media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+}
 }
 .logo{
-    font-family: 'Raleway';
+    display: inline-block;
+    padding: 16px 0;
+    font-family: Raleway;
+    font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
-    text-decoration: none;
-    display: block;
     color: var(--black-color);
-    margin-right: 93px;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 }
 .logo--blue{
     color: var(--blue-color);
 }
 .header-list{
-    display: flex;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+    
+    @media screen and (min-width: 768px) {
+        margin-left: 88px;
+        display: flex;
+    }
 }
 .header-list__item {
+    @media screen and (min-width: 768px) {
     margin-right: 50px;
 
     &:last-child {
         margin-left: 0;
     }
+  }
 }
-.header-list__link{
-    font-weight: 500;
-    color: var(--text-color);
-    text-decoration: none;
-    padding-bottom: 32px;
-    padding-top: 32px;
-    display: block;
+.header-list__link{   
+    padding-top: 25px;
+    padding-bottom: 25px;
     position: relative;
+    display: block;   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover,
     &focus{
         color: var(--blue-color);
     }
-}
+    @media screen and (min-width: 1200px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+  }
 .link--line::after {
+    @media screen and (min-width: 768px) {
     content: '';
     position: absolute;
     width: 100%;
@@ -58,25 +98,62 @@ align-items: center;
     left: 0;
     border-radius: 2px;
     background-color: var(--blue-color);
+    }
 }
 .current {
+    @media screen and (min-width: 768px) {
     color: var(--blue-color);
-}
+ }
+} 
 
 .header-info {
-    display: flex;
-    margin-left: auto;
-
-    &__item {
-        margin-left: 50px;
+    @media screen and (max-width: 768px) {
+        display: none;
     }
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+    
+    &__item {
+        margin-bottom: 10px;
+    }
+    
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-left: auto;
+        flex-direction: row;
 
-    &__item:first-child {
-        margin-left: 0px;
+        &__item {
+            margin-left: 50px;
+        }
+        
+        &__item:first-child {
+            margin-left: 0px;
+        }
     }
 }
 
 .header-info__link {
+    &:hover,
+    &:focus {
+        color: var(--blue-color);
+    }
+    @media screen and (min-width: 768px) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: var(--secondary-text-color);
+    }
+
+    @media screen and (min-width: 1200px) {
     display: flex;
     padding: 32px 0;
     align-items: center;
@@ -89,10 +166,6 @@ align-items: center;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-        color: var(--blue-color);
     }
 }
 
@@ -106,5 +179,12 @@ align-items: center;
     .header-info__link:hover &,
     .header-info__link:focus & {
         fill: var(--blue-color);
+    }
+    @media screen and (min-width: 768px) {
+        margin-right: 8px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        margin-right: 10px;
     }
 }

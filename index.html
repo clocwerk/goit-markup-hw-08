@@ -49,9 +49,62 @@
             >
           </li>
         </ul>
+        <button class="menu-button" type="button" data-menu-button aria-expanded="false">
+          <svg class="menu-icon" width="40px" height="40px">
+            <use class="menu-icon__open" href="./images/icons/icons.svg#icon-burger"></use>
+            <use class="menu-icon__close" href="./images/icons/icons.svg#icon-close-burger"></use>
+          </svg>
+        </button>
+        <!-- Телефон-->
+        <div class="menu" data-menu>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list">
+              <li class="menu__nav-item">
+                <a class="menu__nav-link current" href="./index.html">Студия</a>
+              </li>
+              <li class="menu__nav-item">
+                <a class="menu__nav-link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="menu__nav-item"><a class="menu__nav-link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="menu__contacts-list">
+            <li class="menu__contacts-item">
+              <a
+                class="menu__contacts-link--phone"
+                href="tel:+380961111111"
+                target="_blank"
+                rel="noopener noreferrer"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="menu__contacts-item">
+              <a
+                class="menu__contacts-link--mail"
+                href="mailto:info@devstudio.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="menu__social-list">
+            <li class="menu__social-item">
+              <a href="" class="menu__social-link line">Instagram</a>
+            </li>
+            <li class="menu__social-item">
+              <a href="" class="menu__social-link line">Twitter</a>
+            </li>
+            <li class="menu__social-item">
+              <a href="" class="menu__social-link line">Facebook</a>
+            </li>
+            <li class="menu__social-item">
+              <a href="" class="menu__social-link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
-
     <main>
       <!--Шапка-->
       <section class="hat">
@@ -65,7 +118,7 @@
       </section>
       <!--Особенности-->
       <section class="peculiarities">
-        <div class="container">
+        <div class="container peculiarities-container">
           <h2 class="visually-hidden">Особенности</h2>
           <ul class="peculiarities-list">
             <li class="peculiarities-list__item">
@@ -115,26 +168,71 @@
           </ul>
         </div>
       </section>
-
       <!--Чим ми займаємось-->
       <section class="work">
         <div class="container">
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="work-list">
             <li class="work-list__item">
-              <img src="./images/studio/we-doing/box1.jpg" alt="Изучаем технологии" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-work-section/pic-1.jpg   1x,
+                    ./images/our-work-section/img@2x1.jpg 2x
+                  "
+                  media="(min-width:1200px )"
+                />
+                <img
+                  src="
+                  ./images/our-work-section/pic-1.jpg "
+                  alt="програмирует"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
               <div class="work-label">
                 <h3 class="work-label__title">Десктопные приложения</h3>
               </div>
             </li>
             <li class="work-list__item">
-              <img src="./images/studio/we-doing/box2.jpg" alt="подбираем варианты" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-work-section/pic-2.jpg    1x,
+                    ./images/our-work-section/img@2x-1.jpg 2x
+                  "
+                  media="(min-width:1200px )"
+                />
+                <img
+                  src="./images/our-work-section/pic-2.jpg"
+                  alt="делает логотипы"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
               <div class="work-label">
                 <h3 class="work-label__title">Мобильные приложения</h3>
               </div>
             </li>
             <li class="work-list__item">
-              <img src="./images/studio/we-doing/box3.jpg" alt="Внимание к деталям" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-work-section/pic-3.jpg    1x,
+                    ./images/our-work-section/img@2x-2.jpg 2x
+                  "
+                  media="(min-width:1200px )"
+                />
+                <img
+                  src="./images/our-work-section/pic-3.jpg"
+                  alt="ретуширует"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
               <div class="work-label">
                 <h3 class="work-label__title">Дизайнерские решения</h3>
               </div>
@@ -142,14 +240,43 @@
           </ul>
         </div>
       </section>
-
       <!--Наша команда-->
       <section class="team">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img src="./images/studio/our-team/img.jpg" alt="мужик" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team-section/desc/img.jpg      1x,
+                    ./images/our-team-section/desc/img@2x-3.jpg 2x
+                  "
+                  media="(min-width:1200px )"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/tab/img.jpg       1x,
+                    ./images/our-team-section/tab/member@2x.jpg 2x
+                  "
+                  media="(min-width:768px )"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/mob/img.jpg    1x,
+                    ./images/our-team-section/mob/img@2x.jpg 2x
+                  "
+                  media="(max-width:767px )"
+                />
+                <img
+                  class="our-team-list-card"
+                  src="./images/our-team-section/mob/img.jpg"
+                  alt="портрет мужчины"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-about">
                 <h3 class="team-about__title">Игорь Демьяненко</h3>
                 <p class="team-about__text">Product Designer</p>
@@ -182,7 +309,37 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/studio/our-team/img1.jpg" alt="женщина" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team-section/desc/front-end-developer.jpg 1x,
+                    ./images/our-team-section/desc/img@2x-4.jpg            2x
+                  "
+                  media="(min-width:1200px )"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/tab/img-1.jpg       1x,
+                    ./images/our-team-section/tab/member@2x-1.jpg 2x
+                  "
+                  media="(min-width:768px )"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/mob/img-1.jpg    1x,
+                    ./images/our-team-section/mob/img@2x-1.jpg 2x
+                  "
+                  media="(max-width:767px )"
+                />
+                <img
+                  class="our-team-list-card"
+                  src="./images/our-team-section/mob/img-1.jpg"
+                  alt="портрет женщины в очках"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-about">
                 <h3 class="team-about__title">Ольга Репина</h3>
                 <p class="team-about__text">Frontend Developer</p>
@@ -215,7 +372,37 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/studio/our-team/img2.jpg" alt="мужик" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team-section/desc/marketing.jpg 1x,
+                    ./images/our-team-section/desc/img@2x-5.jpg  2x
+                  "
+                  media="(min-width:1200px )"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/tab/img-2.jpg       1x,
+                    ./images/our-team-section/tab/member@2x-2.jpg 2x
+                  "
+                  media="(min-width:768px )"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/mob/img-2.jpg    1x,
+                    ./images/our-team-section/mob/img@2x-2.jpg 2x
+                  "
+                  media="(max-width:767px )"
+                />
+                <img
+                  class="our-team-list-card"
+                  src="./images/our-team-section/mob/img-2.jpg"
+                  alt="портрет мужчины"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-about">
                 <h3 class="team-about__title">Николай Тарасов</h3>
                 <p class="team-about__text">Marketing</p>
@@ -248,7 +435,37 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img src="./images/studio/our-team/img3.jpg" alt="мужик" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team-section/desc/ui-designer.jpg 1x,
+                    ./images/our-team-section/desc/img@2x-6.jpg    2x
+                  "
+                  media="(min-width:1200px )"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/tab/img-3.jpg       1x,
+                    ./images/our-team-section/tab/member@2x-3.jpg 2x
+                  "
+                  media="(min-width:768px )"
+                />
+                <source
+                  srcset="
+                    ./images/our-team-section/mob/img-3.jpg    1x,
+                    ./images/our-team-section/mob/img@2x-3.jpg 2x
+                  "
+                  media="(max-width:767px )"
+                />
+                <img
+                  class="our-team-list-card"
+                  src="./images/our-team-section/mob/img-3.jpg"
+                  alt="портрет мужчины"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-about">
                 <h3 class="team-about__title">Михаил Ермаков</h3>
                 <p class="team-about__text">UI Designer</p>
@@ -286,7 +503,7 @@
       <!-- Постоянные клиенты -->
       <section class="customers">
         <div class="container">
-          <h2 class="customers-title">Постоянные клиенты</h2>
+          <h2 class="team-title">Постоянные клиенты</h2>
           <ul class="customers-list">
             <li class="customers-list__item">
               <a class="customers-link">
@@ -387,8 +604,8 @@
           <h3 class="footer-mail-title">Подпишитесь на рассылку</h3>
           <div class="footer-form-container">
             <form class="footer-form">
-              <input class="footer-form__input" type="email" name="email" placeholder="E-mail" />
-              <button class="footer-form__button" type="submit">
+              <input class="footer-form-input" type="email" name="email" placeholder="E-mail" />
+              <button class="footer-form-button" type="submit">
                 Подписаться
                 <svg class="send-icon" width="24" height="24">
                   <use href="./images/icons/icons.svg#icon-icon-send"></use>
@@ -464,5 +681,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
