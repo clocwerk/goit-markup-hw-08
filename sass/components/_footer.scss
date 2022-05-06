@@ -19,6 +19,7 @@
 }
 .footer-address-container{
     text-align: center;
+    margin-bottom: 60px;
 
     @include mq(tablet) {
         margin-right: 165px;
@@ -26,7 +27,8 @@
 
     @include mq(desktop) {
         margin-right: 70px;
-        
+        margin-bottom: 0;
+        text-align: start;
     }
 }
 .footer-logo {
@@ -46,12 +48,13 @@
         line-height: 1.19;
     }
 }
-.footer-address-list{
-    margin-bottom: 60px;
-    @include mq(desktop) {
-        margin: 0;
-    }
-}
+// // .footer-address-list{
+// //     margin-bottom: 60px;
+    
+// //         @include mq(desktop) {
+// //             margin: 0;
+// //         }
+// }
 .address-list{
     margin-bottom: 9px;
 
@@ -86,6 +89,7 @@
 }
 ////////////////////////////////////////
 .footer-join{
+    margin-bottom: 60px;
     @include mq(desktop) {
         margin-right: 93px;
     }
@@ -105,7 +109,7 @@
 .join-list{
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    
 
     &__item{
         display: flex;

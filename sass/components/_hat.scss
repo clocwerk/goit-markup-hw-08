@@ -65,6 +65,9 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-color);
+    @media screen and (max-width: 767px) {
+        font-size: 26px;
+    }
 }
 .hat-section__button {
     font-family: inherit;
